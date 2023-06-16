@@ -1,0 +1,401 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GENERAl STYLES start */
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.block {
+  min-height: 300px;
+  border-radius: 10px;
+  background-color: lightgray;
+  margin: 20px 0;
+  padding: 20px;
+  position: relative;
+}
+
+/* GENERAl STYLES end */
+
+/* TOP PART start */
+/* FIRST section start */
+.top-block {
+  overflow-x: auto;
+}
+
+.top-block>p {
+  margin-bottom: 5px;
+}
+
+/* FIRST section end */
+
+/* SECOND section start */
+.block>h2 {
+  margin-bottom: 5px;
+}
+
+form[name="formAdd"],
+form[name="formTable"],
+form[name="formList"] {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form[name="formAdd"]>label {
+  margin-right: 10px;
+}
+
+form[name="formAdd"]>label>input {
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+}
+
+/* create table option start */
+form[name="formTable"] {
+  width: 100%;
+  margin-top: 10px;
+}
+
+form[name="formTable"]>label,
+form[name="formTable"]>fieldset>label {
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+form[name="formTable"]>label>span,
+form[name="formTable"]>fieldset>label>span,
+.row>label>span {
+  width: 200px;
+}
+
+form[name="formTable"]>label>input,
+form[name="formTable"]>fieldset>label>input,
+.row>label>input {
+  height: 30px;
+  width: 600px;
+}
+
+form[name="formTable"]>label>input:focus,
+form[name="formTable"]>fieldset>label>input:focus,
+.row>label>input:focus {
+  outline: 1px solid rgb(57, 223, 249);
+}
+
+form[name="formTable"]>label>input,
+.row>label>input,
+.row>label>select {
+  height: 30px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row>label>input {
+  margin-left: 83px;
+}
+
+.row>label>input,
+.row>label>select {
+  width: 100px;
+}
+
+.btn-create-table {
+  width: 120px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(0, 128, 0);
+  outline: 0 solid rgba(0, 128, 0, 0.5);
+  margin-right: 5px;
+  color: white;
+}
+
+.btn-create-table:focus {
+  outline-width: 3px;
+}
+
+.btn-create-table:hover {
+  cursor: pointer;
+}
+
+/* create table option end */
+
+/* create list option start */
+form[name="formList"] {
+  width: 100%;
+  margin-top: 10px;
+}
+
+form[name="formList"]>label,
+form[name="formList"]>fieldset>label {
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+form[name="formList"]>label>span,
+form[name="formList"]>fieldset>label>span,
+.row>label>span {
+  width: 200px;
+}
+
+form[name="formList"]>label>input,
+form[name="formList"]>label>select {
+  height: 30px;
+  width: 600px;
+}
+
+form[name="formList"]>label>input:focus,
+form[name="formList"]>fieldset>label>input:focus,
+.row>label>input:focus {
+  outline: 1px solid rgb(57, 223, 249);
+}
+
+form[name="formList"]>label>input,
+.row>label>input,
+.row>label>select {
+  height: 30px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.btn-create-list {
+  width: 120px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(0, 128, 0);
+  outline: 0 solid rgba(0, 128, 0, 0.5);
+  margin-right: 5px;
+  color: white;
+}
+
+.btn-create-list:focus {
+  outline-width: 3px;
+}
+
+.btn-create-list:hover {
+  cursor: pointer;
+}
+
+/* create list option end */
+/* SECOND section end */
+/* TOP PART end */
+
+/* CENTER PART start */
+.center-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-edit,
+.btn-style {
+  width: 60px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+}
+
+.btn-edit {
+  background-color: rgb(250, 213, 1);
+  outline: 0 solid rgba(250, 213, 1, 0.5);
+  margin-right: 5px;
+  color: black;
+}
+
+.btn-style {
+  background-color: rgba(0, 139, 139, 1);
+  outline: 0 solid rgba(0, 139, 139, 0.5);
+  color: white;
+}
+
+.btn-edit:focus,
+.btn-style:focus {
+  outline-width: 3px;
+}
+
+.btn-edit:hover,
+.btn-style:hover {
+  cursor: pointer;
+}
+
+/* CENTER PART end */
+
+/* BUTTOM PART start */
+/* edit block start */
+.edit-block {
+  display: none;
+}
+
+.edit-area {
+  width: 100%;
+  height: 200px;
+  resize: none;
+  border: none;
+}
+
+.edit-area:focus {
+  box-shadow: 0 0 5px 0 rgb(57, 223, 249);
+  outline: none;
+}
+
+.btn-add,
+.btn-save {
+  width: 60px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+}
+
+.btn-add {
+  background-color: rgb(255, 0, 0);
+  outline: 0 solid rgba(255, 0, 0, 0.5);
+  color: white;
+}
+
+.btn-save {
+  background-color: rgb(0, 128, 0);
+  outline: 0 solid rgba(0, 128, 0, 0.5);
+  color: white;
+}
+
+.btn-add:focus,
+.btn-save:focus {
+  outline-width: 3px;
+}
+
+.btn-add:hover,
+.btn-save:hover {
+  cursor: pointer;
+}
+
+/* edit block end */
+
+/* style block start */
+.style-block {
+  display: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+fieldset {
+  width: 400px;
+  margin-bottom: 5px;
+  border: none;
+}
+
+legend {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.font-size>label {
+  margin-right: 15px;
+
+}
+
+.font-size>label>input {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+
+.font-family>select {
+  height: 30px;
+  width: 300px;
+}
+
+.btn-text-color,
+.btn-bg-color {
+  width: 120px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: rgb(128, 128, 128);
+  outline: 0 solid rgba(128, 128, 128, 0.5);
+}
+
+.btn-text-color:focus,
+.btn-bg-color:focus {
+  outline-width: 3px;
+}
+
+.btn-text-color:hover,
+.btn-bg-color:hover {
+  cursor: pointer;
+}
+
+.colors {
+  width: 240px;
+  height: 240px;
+  display: flex;
+  flex-flow: row wrap;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.color-box {
+  width: 80px;
+  height: 80px;
+}
+
+.font-style>label {
+  margin-right: 10px;
+}
+
+.font-style>label>input {
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+}
+
+/* style block end */
+/* BUTTOM PART end */
+
+/* JS SET STYLES start */
+.bold {
+  font-weight: bold;
+}
+
+.cursive {
+  font-style: italic;
+}
+
+.first,
+.second,
+.create-list,
+.create-table {
+  display: none;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* JS SET STYLES end */

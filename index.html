@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Editor JS</title>
+  <link rel="shortcut icon" href="./Images/prometheus_icon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- FIRST SECTION start -->
+    <div class="first show">
+      <!-- top block start -->
+      <div class="block top-block">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <!-- top block end -->
+
+      <!-- center block start -->
+      <div class="center-block">
+        <input type="button" value="edit" class="btn-edit">
+        <input type="button" value="style" class="btn-style">
+      </div>
+      <!-- center block end -->
+
+      <!-- buttom block start -->
+      <div class="block buttom-block">
+        <div class="edit-block">
+          <textarea class="edit-area"></textarea>
+          <input type="button" value="add" class="btn-add">
+          <input type="button" value="save" class="btn-save">
+        </div>
+        <div class="style-block">
+          <form name="style">
+            <!-- set font size part start -->
+            <fieldset class="font-size">
+              <legend>Font Size:</legend>
+              <label for="rad12px"><input type="radio" name="size" value="12px" id="rad12px">12px</label>
+              <label for="rad14px"><input type="radio" name="size" value="14px" id="rad14px" checked>14px</label>
+              <label for="rad16px"><input type="radio" name="size" value="16px" id="rad16px">16px</label>
+              <label for="rad18px"><input type="radio" name="size" value="18px" id="rad18px">18px</label>
+              <label for="rad20px"><input type="radio" name="size" value="20px" id="rad20px">20px</label>
+            </fieldset>
+            <!-- set font size part end -->
+
+            <!-- set font family part start -->
+            <fieldset class="font-family">
+              <legend>Font Family:</legend>
+              <select id="fontFamily">
+                <option value="" selected disabled>Choose option</option>
+                <option value="cursive">Cursive</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="monospace">Monospace</option>
+                <option value="sans-serif">Sans Serif</option>
+              </select>
+            </fieldset>
+            <!-- set font family part end -->
+
+            <!-- set bg&font color part start -->
+            <fieldset class="font-color">
+              <legend>Colors:</legend>
+              <input type="button" value="Color of Text" class="btn-text-color">
+              <input type="button" value="Background color" class="btn-bg-color">
+              <div class="colors hide">
+                <div class="color-box"></div>
+                <div class="color-box"></div>
+                <div class="color-box"></div>
+                <div class="color-box"></div>
+                <div class="color-box"></div>
+                <div class="color-box"></div>
+                <div class="color-box"></div>
+                <div class="color-box"></div>
+                <div class="color-box"></div>
+              </div>
+            </fieldset>
+            <!-- set bg&font color part end -->
+
+            <!-- set font style part start -->
+            <fieldset class="font-style">
+              <legend>Style:</legend>
+              <label for="boldCheck">
+                <input type="checkbox" id="boldCheck">Bold Text</label>
+              <label for="cursiveCheck">
+                <input type="checkbox" id="cursiveCheck">Cursive Text</label>
+            </fieldset>
+            <!-- set font style part end -->
+          </form>
+        </div>
+      </div>
+      <!-- buttom block end -->
+    </div>
+    <!-- FIRST SECTION end -->
+
+    <!-- SECOND SECTION start -->
+    <div class="second">
+      <div class="block">
+        <h2>Choose what you want:</h2>
+        <form name="formAdd">
+          <label for="table">
+            <input type="radio" name="createType" value="table" id="table">table</label>
+          <label for="list">
+            <input type="radio" name="createType" value="list" id="list">list</label>
+        </form>
+        <!-- create-table start -->
+        <div class="create-table">
+          <form name="formTable">
+            <label for="trCount"><span>Count TR:</span><input type="number" name="tr-count" min="1" id="trCount">
+            </label>
+            <label for="tdCount"><span>Count TD:</span><input type="number" name="td-count" min="1" id="tdCount">
+            </label>
+            <fieldset>
+              <legend>Add style to your table:</legend>
+              <label for="tdWidth"><span>Width to TD:</span><input type="number" name="td-width" min="1" id="tdWidth">
+              </label>
+              <label for="tdHeight"><span>Height to TD:</span><input type="number" name="td-height" min="1"
+                  id="tdHeight">
+              </label>
+              <div class="row">
+                <label for="borderWidth"><span>Width to border:</span><input type="number" name="border-width" min="0"
+                    id="borderWidth">
+                </label>
+                <label for="borderWidth"><span>Type of border:</span>
+                  <select name="table-border-style" id="tableBorderStyle">
+                    <option value="solid">solid</option>
+                    <option value="dashed">dashed</option>
+                    <option value="double">double</option>
+                    <option value="dotted">dotted</option>
+                  </select>
+                </label>
+                <label for="borderWidth"><span>Color of border:</span>
+                  <select name="table-border-color" id="tableBorderColor">
+                    <option value="black">black</option>
+                    <option value="red">red</option>
+                    <option value="blue">blue</option>
+                    <option value="green">green</option>
+                  </select>
+                </label>
+              </div>
+            </fieldset>
+            <input type="button" value="Create table" name="btn-create-table" class="btn-create-table">
+          </form>
+        </div>
+        <!-- create-table end -->
+
+        <!-- create-list start -->
+        <div class="create-list">
+          <form name="formList">
+            <label for="listCount"><span>Count Li:</span><input type="number" name="list-count" min="1" id="listCount">
+            </label>
+            <label for="listType"><span>Type of marks:</span>
+              <select name="list-type" id="listType">
+                <option value="circle">circle</option>
+                <option value="disc">disc</option>
+                <option value="square">square</option>
+              </select>
+            </label>
+            <input type="button" value="Create list" name="btn-create-list" class="btn-create-list">
+          </form>
+        </div>
+        <!-- create-list end -->
+      </div>
+    </div>
+    <!-- SECOND SECTION end -->
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
